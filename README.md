@@ -20,6 +20,7 @@ Required Setup :
 * Maven- (Version 3.8.1)- Dependency Management
 * Cucumber - (version 7.2.3 )- BDD Framework
 * Rest-Assured - (version 4.5.1) -API Calls
+* Junit 4 - (version 4.12) - Test Framework
 
 In order to execute the automation suite navigate to the Project directory within a Terminal/CMD window and run the command:
 
