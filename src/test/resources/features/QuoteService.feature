@@ -24,10 +24,10 @@ Feature: Quote service Tests
 
   @generateQuoteUnauthorizedError
   Scenario Outline: Unauthorized error when trying to generate quote with invalid token
-    When User perform get request "/quote" with with name "<token>"
+    When User perform get request "/quote" with invalid token "<token>"
     Then The status code should be 401
     And response body should have detail "<detail>"
 
     Examples: 
       | token | detail           |
-      |  1234 | token is invalid |
+      | 12345 | token is invalid |

@@ -7,17 +7,14 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-				features = "src/test/resources/Feature",
+				features = "src/test/resources/features",
 				glue = "com.assignment.rest.cucumber",
 				
 				plugin = { "pretty", "json:target/cucumber-reports/Cucumber.json",
 						"junit:target/cucumber-reports/Cucumber.xml",
-						"html:target/cucumber-reports/Cucumber.html",
-						"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
+						"html:target/cucumber-reports/Cucumber.html"},
 				monochrome = true
 				)
-public class CucumberIntegrationTestRunner {
+public class CucumberRunnerIntegrationTest{
 	
-	
-		
 }

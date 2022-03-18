@@ -21,3 +21,12 @@ Feature: Weather service Tests
     Examples: 
       | paramname | msg            | type                |
       | token     | field required | value_error.missing |
+@generateQuoteUnauthorizedError
+  Scenario Outline: Unauthorized error when trying to generate quote with invalid token
+    When User perform get request on "/weather" with invalid token "<token>"
+    Then The status code should be 401
+    
+
+    Examples: 
+      | token | 
+      |  1234 |

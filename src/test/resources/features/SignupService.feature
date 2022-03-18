@@ -20,13 +20,13 @@ Feature: Signup service Tests
   @tokenRenewal
   Scenario Outline: Renew Token for the user
     Given User perform successful signup operation with "<name>","<passwd>" with status 200
-    When User perform patch request "/renew" with parameter "name" and value "<name>"
+    When User perform patch request "/renew" with parameter name "name" and value "<name>"
     Then The status code should be 200
     And response body should have key "<key>" and message "<message>"
 
     Examples: 
-      | name          | passwd | key   | message                                    |
-      | Renew_User222 | rn2334 | token | Please save it. This is visible only once. |
+      | name       | passwd | key   | message                                    |
+      | Renew_User | rn2334 | token | Please save it. This is visible only once. |
 
   @tokenValidation
   Scenario Outline: Validate provided Token is valid or not
@@ -47,5 +47,5 @@ Feature: Signup service Tests
     And response body should have response text "<message>"
 
     Examples: 
-      | name      | passwd | message   |
-      | Test_User | testk1222 | Test_User |
+      | name       | passwd  | message    |
+      | Guest_User | test123 | Guest_User |
